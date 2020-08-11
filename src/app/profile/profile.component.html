@@ -1,0 +1,14 @@
+<div class="row">
+    <div class="col-md-2">
+        <!-- details left side bar blue onle -->
+        <a [routerLink]="['detail']"> Details </a>
+        <a [routerLink]="['posts']"> Posts </a>
+        <a [routerLink]="['gallery']"> Gallery </a>
+        <a [routerLink]="['todo']"> Todo </a>
+    </div>
+    <div class="col-md-10">
+
+        <router-outlet></router-outlet>
+    </div>
+</div>
+

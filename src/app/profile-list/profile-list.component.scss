@@ -1,0 +1,21 @@
+
+.profile-list {
+    background-image: url("../../assets/Background.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    .card {
+        width: 601px;
+        top: 85px;
+        left: 468px;
+        border-radius: 17px;
+        .card-header{
+            text-align: center;
+        }
+        .list-group-flush {
+            &.list {
+                padding: 5px 24px 5px 24px;
+                cursor: pointer;
+            }
+        }
+    }
+}
