@@ -7,4 +7,23 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'tanorbitTask';
+  BackgrounUrl = '../assets/Background.png';
+
+
+ profileList = ["Leanne Graham","Ervin Howell", "Leanne Graham", "Leanne Graham", "Leanne Graham", "Leanne Graham", "Leanne Graham", "Leanne Graham"];
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }

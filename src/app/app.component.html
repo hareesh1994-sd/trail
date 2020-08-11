@@ -1,24 +1,25 @@
-<div class="alert alert-primary" role="alert">
-    A simple primary alert—check it out!
+<div class="boby__main">
+  <div class="background__img">
+
+    <img [src]="BackgrounUrl" alt="Background.png">
+  
+  </div> 
+  <div class="body__card">
+    <div class="card" style="width: 30rem;">
+      <div class="card-header">
+         Select an account
+      </div>
+      <div class="profile__list"></div>
+      <ul class="list-group list-group-flush">
+
+        <li class="list-group-item"  *ngFor="let name of profileList"><img [src]="BackgrounUrl" alt="Background.png" width="30px" height="20px">
+          {{name}}</li>
+
+      </ul>
+    </div>
+
   </div>
-  <div class="alert alert-secondary" role="alert">
-    A simple secondary alert—check it out!
-  </div>
-  <div class="alert alert-success" role="alert">
-    A simple success alert—check it out!
-  </div>
-  <div class="alert alert-danger" role="alert">
-    A simple danger alert—check it out!
-  </div>
-  <div class="alert alert-warning" role="alert">
-    A simple warning alert—check it out!
-  </div>
-  <div class="alert alert-info" role="alert">
-    A simple info alert—check it out!
-  </div>
-  <div class="alert alert-light" role="alert">
-    A simple light alert—check it out!
-  </div>
-  <div class="alert alert-dark" role="alert">
-    A simple dark alert—check it out!
-  </div>
+  <!-- end of the card -->
+</div>
+
+
