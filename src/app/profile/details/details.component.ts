@@ -27,7 +27,7 @@ export class DetailsComponent implements OnInit {
       website: 'hildegard.org',
       company: {
           name: 'Romaguera-Crona',
-          catchPhrase: 'Multi-layered client-server neural-net',
+          catchPhrase: 'Multi-layered client-serverneural',
           bs: 'harness real-time e-markets'
       }
   };

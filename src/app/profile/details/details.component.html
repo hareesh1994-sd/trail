@@ -1,1 +1,99 @@
-<p>details works!</p>
+<!-- <div>{{profileDetails.name}}</div> -->
+
+<div class="row margin">
+    <div class="col-md-4 left-bar">
+        <div class="profile__details">
+            <div class="details__page">
+                <img [src]="profileDetails.profilepicture">
+                <div class="name font opacity1" >{{profileDetails.name}}</div>
+            </div>
+            <div class="details__person">
+                <div class="row">
+                    <div class="col-md-4 opacity font">Usernem <span>:</span></div>
+                    <div class="col-md-8 no-padding font opacity1">{{profileDetails.username}}</div>
+                </div>
+               
+                <div class="row">
+                    <div class="col-md-4 opacity  font">e-mail <span>:</span></div>
+                    <div class="col-md-8 no-padding font opacity1">{{profileDetails.email}}</div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-4 opacity font">Phone <span>:</span></div>
+                    <div class="col-md-8 no-padding font opacity1">{{profileDetails.address.zipcode}}</div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-4 opacity font">Website <span>:</span></div>
+                    <div class="col-md-8 no-padding font opacity1">{{profileDetails.website}}</div>
+                </div>
+            </div>
+
+            <div class="details__company">
+                <div class="details__page">
+                    <div class="font name opacity">Company </div>
+                </div>
+                <div class="details__company1">
+                    <div class="row">
+                        <div class="col-md-4 opacity font">Name <span>:</span></div>
+                        <div class="col-md-8 no-padding font opacity1">{{profileDetails.company.name}}</div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-4 opacity font">cacphrase<span>:</span></div>
+                        <div class="col-md-8 no-padding font opacity1">{{profileDetails.company.catchPhrase}}</div>
+                    </div>
+                   
+                   
+    
+                    <div class="row">
+                        <div class="col-md-4 opacity font" >bs <span>:</span></div>
+                        <div class="col-md-8 no-padding font opacity1">{{profileDetails.company.bs}}</div>
+                    </div>
+    
+                    
+                </div>
+                
+
+
+            </div>
+
+        </div>
+        
+    </div>
+
+
+    <div class="col-md-8">
+        <div class="details__page opacity font">
+            
+            Address<span>:</span>
+        </div>
+        <div class="details__company1">
+            <div class="row margin1 ">
+                <div class="col-md-4 opacity font">Street <span>:</span></div>
+                <div class="col-md-8 font no-padding opacity1">{{profileDetails.address.street}}</div>
+            </div>
+
+            <div class="row margin1 ">
+                <div class="col-md-4 opacity font">Suite<span>:</span></div>
+                <div class="col-md-8  font no-padding opacity1">{{profileDetails.address.suite}}</div>
+            </div>
+           
+
+            <div class="row margin1">
+                <div class="col-md-4 opacity font" >City <span>:</span></div>
+                <div class="col-md-8  font no-padding opacity1">{{profileDetails.address.city}}</div>
+            </div>
+            <div class="row margin1">
+                <div class="col-md-4 opacity font" >Zipcode <span>:</span></div>
+                <div class="col-md-8 font no-padding opacity1">{{profileDetails.address.zipcode}}</div>
+            </div>
+
+            
+        </div>
+        
+    </div>
+
+
+</div>
+

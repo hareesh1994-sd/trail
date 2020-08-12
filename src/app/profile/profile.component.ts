@@ -7,7 +7,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProfileComponent implements OnInit {
 
-  constructor() { }
+  title:string = 'Profile';
+
+
+  constructor(){ }
+
+  updateTitle(title){
+
+    this.title = title;
+    
+  };
+
 
   ngOnInit(): void {
   }

@@ -4,17 +4,43 @@
     background-repeat: no-repeat;
     background-size: 100% 100%;
     .card {
-        width: 601px;
-        top: 85px;
-        left: 468px;
+        width: 660px;
+        top: 130px;
+        left: 515px;
         border-radius: 17px;
+        .font{
+            font-size: 15px;
+            font-weight: bold;
+            color: #8f8f8f;
+        }
+        
+        
         .card-header{
             text-align: center;
+        }
+        .headerp{
+            padding: 45px 0px;
+            font-size: 20px;
+            font-weight: bold;
+            color: #8f8f8f;
         }
         .list-group-flush {
             &.list {
                 padding: 5px 24px 5px 24px;
                 cursor: pointer;
+                height: 36vw;
+                overflow-y: scroll;
+            }
+        }
+        .list-group-item {
+            &.no-left-right-padding {
+                padding: 0.75rem 0;
+            }
+            .profile-picture{
+                width: 30px;
+                height: 20px;
+                border-radius: 50%;
+                margin-right: 8px;
             }
         }
     }
