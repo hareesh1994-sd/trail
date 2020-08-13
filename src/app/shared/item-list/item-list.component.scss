@@ -1,0 +1,19 @@
+.list-group-flush {
+    &.list {
+        padding: 5px 24px 5px 24px;
+        cursor: pointer;
+        height: 30vw;
+        overflow-y: scroll;
+    }
+}
+.list-group-item {
+    &.no-left-right-padding {
+        padding: 0.75rem 0;
+    }
+    .profile-picture{
+        width: 30px;
+        height: 20px;
+        border-radius: 50%;
+        margin-right: 8px;
+    }
+}

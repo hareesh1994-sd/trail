@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { DataServiceService } from '../../shared/data-service.service';
 import { UserDetails } from '../../shared/user.model';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-profile-header',
@@ -12,14 +13,28 @@ export class ProfileHeaderComponent implements OnInit {
   @Input() title: string;
   profileDetails: UserDetails = null;
   
-  constructor( private dataSvc: DataServiceService) { 
+  profileList: Array<UserDetails> = [];
+  
+  constructor( private dataSvc: DataServiceService,private router: Router) { 
     this.profileDetails = this.dataSvc.getSelectedUser();
+    this.profileList = this.dataSvc.getUserList();
 
-    
+
   }
 
   ngOnInit(): void {
   }
+
+  redirect():any {
+
+    this.router.navigateByUrl('/');
+    
+  }
+  
+
+
+
+  
 
 }
 

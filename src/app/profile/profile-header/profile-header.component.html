@@ -1,45 +1,29 @@
-<!-- 
-<div class="row">
-     <div class="row">
-        <div> {{ title}} </div>
-        <div class="dropdown ">
-            <div class="dropdown-toggle logged-in-useer" 
-                data-toggle="dropdown" 
-                aria-haspopup="true" aria-expanded="false">
-                <img [src]="profileDetails.profilepicture" alt="">
-                    {{ profileDetails.name}} 
-            </div>
-            <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-              <div class="dropdown-item" type="button">{{ profileDetails.name}}</div>
-              <div class="dropdown-item" type="button">{{ profileDetails.email}}</div>
-            </div>
-          </div>     
-        <div> 
-    </div> -->
+
 
     <div class="droup">
-        <div class="right">
-            {{ title}}   
-        </div>
-        <div class="left"> 
-            <div class="dropdown-toggle"id="dropdownMenu2" data-toggle="dropdown">
-                <img [src]="profileDetails.profilepicture" alt="">
-                {{ profileDetails.name}} 
+            <div class="right font-size opacity1">
+                {{ title}}   
             </div>
-            <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-              <div><img [src]="profileDetails.profilepicture" alt=""> </div>
-              <div class="ptb"> {{ profileDetails.name}} </div>
-              <div class="pbt"> {{ profileDetails.email}} </div>
-              <a class="button pbt" type="button">Sign Out</a>
+            <div class="left"> 
+                <div class="dropdown-toggle center font-size opacity1"id="dropdownMenu2" data-toggle="dropdown">
+                    <img [src]="profileDetails.profilepicture" alt="">
+                    {{ profileDetails.name}} 
+                </div>
+                
+                <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                <div class="centering"><img [src]="profileDetails.profilepicture" alt=""> </div>
+                <div class="ptb center"> {{ profileDetails.name}} </div>
+                <div class="pbt center"> {{ profileDetails.email}} </div>
+                <!-- item list -->
+                <app-item-list [height]="120" [profileList]="profileList"></app-item-list>
+
+
+                <div (click)="redirect()" class="centering">
+                    <a class="button pbt center" type="button">Sign Out</a></div>
+                
+                </div>
             
-            </div>
-           
-        </div>
-        
-           
-          
-        
-        
+            </div>   
     </div>
     
 

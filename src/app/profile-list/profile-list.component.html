@@ -1,14 +1,7 @@
 <div class="profile-list">
     <div class="card">
         <div class="card-header headerp">Select an account</div>
-        <ul class="list-group list-group-flush list"> 
-             
-            <li class="list-group-item no-left-right-padding font"  
-                *ngFor="let profile of profileList" 
-                [routerLink]="['/profile/', profile.id]">
-                <img  [src]="profile.profilepicture" class="profile-picture ">
-                {{profile.name}}
-            </li>
-        </ul>
+            <app-item-list [height]="430"  [profileList]="profileList"></app-item-list>
+            
       </div>
   </div>

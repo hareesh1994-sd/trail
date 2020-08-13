@@ -1,0 +1,12 @@
+
+<ul [style.height.px]="height" class="list-group list-group-flush list">
+    <li class="list-group-item no-left-right-padding font"  
+        *ngFor="let profile of profileList" 
+        [routerLink]="['/profile/', profile.id]">
+        <img  [src]="profile.profilepicture" class="profile-picture">
+        {{profile.name}}
+    </li>
+    <!-- <app-profile-header [profileList]="profileList"></app-profile-header> -->
+    
+</ul>
+

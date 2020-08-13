@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { DataServiceService } from '../shared/data-service.service';
 import { UserDetails } from '../shared/user.model';
 
