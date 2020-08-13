@@ -1,0 +1,34 @@
+*{
+    list-style:none ;
+}
+
+
+
+
+.dropdown-menu{
+    text-align: center;
+}
+.droup{
+    display: flex;
+    flex-direction: row;
+    border-bottom: 1px solid wheat;
+    align-items: center;
+    .right{
+        padding-right: 800px;
+    }
+    .left img{
+        width: 80px;
+        height: 70px;
+        border-radius: 50%;
+    }
+    .button{
+        background-color: red;
+        color: white;
+        
+        border-radius: 10px;
+    }
+    .ptb{
+        padding: 20px 0px;
+    }
+  
+}

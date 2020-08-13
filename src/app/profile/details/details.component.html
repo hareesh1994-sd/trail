@@ -1,7 +1,7 @@
 <!-- <div>{{profileDetails.name}}</div> -->
 
-<div class="row margin">
-    <div class="col-md-4 left-bar">
+<div class="row margin" *ngIf="profileDetails">
+    <div class="col-md-5 left-bar">
         <div class="profile__details">
             <div class="details__page">
                 <img [src]="profileDetails.profilepicture">
@@ -38,24 +38,15 @@
                         <div class="col-md-4 opacity font">Name <span>:</span></div>
                         <div class="col-md-8 no-padding font opacity1">{{profileDetails.company.name}}</div>
                     </div>
-
                     <div class="row">
                         <div class="col-md-4 opacity font">cacphrase<span>:</span></div>
                         <div class="col-md-8 no-padding font opacity1">{{profileDetails.company.catchPhrase}}</div>
                     </div>
-                   
-                   
-    
                     <div class="row">
                         <div class="col-md-4 opacity font" >bs <span>:</span></div>
                         <div class="col-md-8 no-padding font opacity1">{{profileDetails.company.bs}}</div>
-                    </div>
-    
-                    
+                    </div>                
                 </div>
-                
-
-
             </div>
 
         </div>
@@ -63,37 +54,38 @@
     </div>
 
 
-    <div class="col-md-8">
+    <div class="col-md-7">
         <div class="details__page opacity font">
             
             Address<span>:</span>
         </div>
-        <div class="details__company1">
-            <div class="row margin1 ">
-                <div class="col-md-4 opacity font">Street <span>:</span></div>
-                <div class="col-md-8 font no-padding opacity1">{{profileDetails.address.street}}</div>
+        <div class="address__details">
+            <div class="row">
+                <div class="col-md-3 opacity font">Street <span>:</span></div>
+                <div class="col-md-9 font no-padding opacity1">{{profileDetails.address.street}}</div>
             </div>
 
-            <div class="row margin1 ">
-                <div class="col-md-4 opacity font">Suite<span>:</span></div>
-                <div class="col-md-8  font no-padding opacity1">{{profileDetails.address.suite}}</div>
+            <div class="row">
+                <div class="col-md-3 opacity font">Suite<span>:</span></div>
+                <div class="col-md-9  font no-padding opacity1">{{profileDetails.address.suite}}</div>
             </div>
            
 
-            <div class="row margin1">
-                <div class="col-md-4 opacity font" >City <span>:</span></div>
-                <div class="col-md-8  font no-padding opacity1">{{profileDetails.address.city}}</div>
+            <div class="row">
+                <div class="col-md-3 opacity font" >City <span>:</span></div>
+                <div class="col-md-9  font no-padding opacity1">{{profileDetails.address.city}}</div>
             </div>
-            <div class="row margin1">
-                <div class="col-md-4 opacity font" >Zipcode <span>:</span></div>
-                <div class="col-md-8 font no-padding opacity1">{{profileDetails.address.zipcode}}</div>
-            </div>
-
-            
+            <div class="row">
+                <div class="col-md-3 opacity font" >Zipcode <span>:</span></div>
+                <div class="col-md-9 font no-padding opacity1">{{profileDetails.address.zipcode}}</div>
+            </div>            
         </div>
-        
+        <google-map height="500px"
+                width="100%"
+                [zoom]="zoom"
+                [center]="center"
+                [options]="options">
+        </google-map>
     </div>
-
-
 </div>
 

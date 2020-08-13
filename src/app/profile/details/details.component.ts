@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { DataServiceService } from '../../shared/data-service.service';
+import { UserDetails } from '../../shared/user.model';
 
 @Component({
   selector: 'app-details',
@@ -6,33 +8,27 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./details.component.scss']
 })
 export class DetailsComponent implements OnInit {
-
-  profileDetails =  {
-      id: 1,
-      name: 'Leanne Graham',
-      username: 'Bret',
-      email: 'Sincere@april.biz',
-      profilepicture: 'https://panorbit.in/wp-content/uploads/2019/hotlink-ok/1001.jpeg',
-      address: {
-          street: 'Kulas Light',
-          suite: 'Apt. 556',
-          city: 'Gwenborough',
-          zipcode: '92998-3874',
-          geo: {
-              lat: '-37.3159',
-              lng: '81.1496'
-          }
-      },
-      phone: '1-770-736-8031 x56442',
-      website: 'hildegard.org',
-      company: {
-          name: 'Romaguera-Crona',
-          catchPhrase: 'Multi-layered client-serverneural',
-          bs: 'harness real-time e-markets'
-      }
+  profileDetails: UserDetails = null;
+  zoom = 12;
+  center: google.maps.LatLngLiteral;
+  options: google.maps.MapOptions = {
+    mapTypeId: 'hybrid',
   };
 
-  constructor() { }
+  constructor(private dataSvc: DataServiceService) {
+    this.profileDetails = this.dataSvc.getSelectedUser();
+    // this.center = {
+    //   lat: +this.profileDetails.address.geo.lat,
+    //   lng: +this.profileDetails.address.geo.lng
+    // };
+
+    navigator.geolocation.getCurrentPosition(position => {
+      this.center = {
+        lat: position.coords.latitude,
+        lng: position.coords.longitude,
+      };
+    });
+  }
 
   ngOnInit(): void {
   }

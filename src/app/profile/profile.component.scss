@@ -7,9 +7,13 @@
 .verticle__navbar{
     background-color: #4152c8;
     margin-left: 40px;
-    height: 45vw; 
+    height: 50vw; 
     border-radius: 20px;
-
+    width: 184px;
+    .tab {
+        font-size: 32px !important;
+        line-height: 52px;
+    }
 }
 .row{
     margin: 30px 0px;
@@ -20,17 +24,18 @@
 .sidebar-nav ul li{
     padding:10px 10px 0px 0px;
     border-bottom: 1px solid #5a5ccd;
-     margin: 0 20px; 
+    margin-left: 20px;
 }
 .sidebar-nav ul li {
     font-size: 15px;
     
     color: white;
 }
-.profile__heading{
-    border-bottom: 1px solid #efefef;
-    padding: 20px 0px;
 
+.active-tab {
+    background-image: url("../../assets//active.ping");
+    background-repeat: no-repeat;
+    background-position: 111px;
 }
 
 

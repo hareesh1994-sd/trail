@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { DataServiceService } from './shared/data-service.service';
 
 @Component({
   selector: 'app-root',
@@ -8,18 +9,7 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'tanorbitTask';
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  constructor(private dataSvc: DataServiceService) {
+    this.dataSvc.initiateFetchForUsers();
+  }
 }

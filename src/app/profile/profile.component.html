@@ -3,25 +3,18 @@
         <!-- details left side bar blue onle -->
         <div class="sidebar-nav verticle__navbar">
             <ul class="nav navbar-nav" >
-                    <li (click)="updateTitle('Profile')" class="active" [routerLink]="['detail']"> Profile </li>
-                    <li (click)="updateTitle('Posts')" class="active" [routerLink]="['posts']"> Posts </li>
-                    <li (click)="updateTitle('Gallery')" class="active" [routerLink]="['gallery']"> Gallery </li>
-                    <li (click)="updateTitle('Todo')" class="active" [routerLink]="['todo']"> Todo </li>
+                    <li (click)="updateTitle('Profile')" class="tab" [routerLink]="['detail']" routerLinkActive="active-tab"> Profile </li>
+                    <li (click)="updateTitle('Posts')" class="tab" [routerLink]="['posts']" routerLinkActive="active-tab"> Posts </li>
+                    <li (click)="updateTitle('Gallery')" class="tab" [routerLink]="['gallery']" routerLinkActive="active-tab"> Gallery </li>
+                    <li (click)="updateTitle('Todo')" class="tab" [routerLink]="['todo']" routerLinkActive="active-tab"> Todo </li>
             </ul>
         </div>
     </div>
 
     <div class="col-md-10">
-        <div class="profile__heading">
-           <strong> {{ title}} </strong>
-        </div>
-        
+        <app-profile-header [title]="title"></app-profile-header>
         <router-outlet></router-outlet>
-        
     </div>
-  
-    
-    
 </div>
-
+<ng-chat [adapter]="adapter" [userId]="userId" [title]="'Chats'" [isCollapsed]="true" [searchEnabled]="false"></ng-chat>
 

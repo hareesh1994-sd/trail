@@ -1,7 +1,8 @@
 <div class="profile-list">
     <div class="card">
         <div class="card-header headerp">Select an account</div>
-        <ul class="list-group list-group-flush list">  
+        <ul class="list-group list-group-flush list"> 
+             
             <li class="list-group-item no-left-right-padding font"  
                 *ngFor="let profile of profileList" 
                 [routerLink]="['/profile/', profile.id]">

@@ -1,5 +1,5 @@
 
-.col-md-4{
+.col-md-5{
     &.left-bar{
         border-right: 1.5px solid #efefef;
         
@@ -57,7 +57,6 @@
     padding-top: 20px;
 }
 .details__company1{
-
     .row{
         line-height: 40px;
         .col-md-4{
@@ -76,7 +75,26 @@
     }
 }
 
-.col-md-8{
+.address__details{
+    .row{
+        line-height: 40px;
+        .col-md-3{
+            text-align: right;
+            span {
+                margin-left: 5px;
+            }
+        }
+        .no-padding {
+            padding-left: 0;
+            padding-right: 0;
+        }
+        .co{
+            margin-left: 2px;
+        }
+    }
+}
+
+.col-md-7{
 
     .details__page{
         text-align: start;
@@ -88,10 +106,6 @@
 .details__company1{
     padding: 0px;
 }
-.margin1{
-    margin: 0 -400px;
-}
-
 
 
 
