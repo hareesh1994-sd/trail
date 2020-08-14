@@ -9,6 +9,7 @@ import { UserDetails } from '../user.model';
 export class ItemListComponent implements OnInit {
 
   @Input() profileList: Array<UserDetails> =[];
+  
   @Input() height:number=50;
 
 
