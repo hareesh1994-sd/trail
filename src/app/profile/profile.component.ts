@@ -15,8 +15,10 @@ export class ProfileComponent implements OnInit {
   adapter: ChatAdapter;
 
   constructor(private actRoute: ActivatedRoute, private dataSvc: DataServiceService){
-    this.userId = +this.actRoute.snapshot.params.profileId;
-    this.dataSvc.setSelectedUser(this.userId);
+    this.actRoute.params.subscribe((routParams) => {
+      this.userId = +routParams.profileId;
+      this.dataSvc.setSelectedUser(this.userId);
+    });
     const chatUser = [];
     this.dataSvc.getUserList().forEach((user) => {
       if (user.id !== this.userId) {

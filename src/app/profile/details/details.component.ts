@@ -16,12 +16,14 @@ export class DetailsComponent implements OnInit {
   };
 
   constructor(private dataSvc: DataServiceService) {
+    this.dataSvc.selecteUserObservable.subscribe((res) => {
+      this.profileDetails = res;
+      // this.center = {
+      //   lat: +this.profileDetails.address.geo.lat,
+      //   lng: +this.profileDetails.address.geo.lng
+      // };
+    });
     this.profileDetails = this.dataSvc.getSelectedUser();
-    // this.center = {
-    //   lat: +this.profileDetails.address.geo.lat,
-    //   lng: +this.profileDetails.address.geo.lng
-    // };
-
     navigator.geolocation.getCurrentPosition(position => {
       this.center = {
         lat: position.coords.latitude,

@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { UserDetails, UserResponse } from './user.model';
+import { Subject  } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -8,6 +9,7 @@ import { UserDetails, UserResponse } from './user.model';
 export class DataServiceService {
   userList: Array<UserDetails> = [];
   selectedUser: UserDetails = null;
+  selecteUserObservable = new Subject<UserDetails>();
 
   constructor(public httpClient: HttpClient) {
       this.httpClient.get('https://panorbit.in/api/users.json').subscribe((userList: UserResponse) => {
@@ -26,6 +28,7 @@ export class DataServiceService {
 
   setSelectedUser(id: number): void {
     this.selectedUser = this.userList.filter((user) => user.id === id)[0];
+    this.selecteUserObservable.next(this.selectedUser);
   }
 
   getSelectedUser(): UserDetails {

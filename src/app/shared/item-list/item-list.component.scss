@@ -4,6 +4,9 @@
         cursor: pointer;
         height: 30vw;
         overflow-y: scroll;
+        &.profile-sub-menu {
+            height: 10vw;
+        }
     }
 }
 .list-group-item {

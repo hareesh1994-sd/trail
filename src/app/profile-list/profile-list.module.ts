@@ -13,6 +13,6 @@ import { ItemListModule } from '../shared/item-list/item-list.module';
     ProfileListRoutingModule,
     ItemListModule
   ],
-  entryComponents:[ItemListComponent],
+  entryComponents: [ItemListComponent]
 })
 export class ProfileListModule { }
